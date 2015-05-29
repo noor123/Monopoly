@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Board boardMonopoly = new Board();
-        boardMonopoly.initialiseFields();
         boardMonopoly.initialisePlayers();
+        boardMonopoly.initialiseFields();
         int playerThatHasTurn = boardMonopoly.playerWhoBegins();
 
         boolean endOfGame = false;
@@ -20,6 +20,7 @@ public class Main {
             } else {
                 playerThatHasTurn = 0;
             }
+            System.out.println("-----------");
 
         }
 

@@ -42,6 +42,7 @@ public class Board {
                     players[y - 1] = new Player(name, this);
                     y++;
                 }
+                System.out.println("-----------");
                 correctValue = true;
             } catch (java.util.InputMismatchException exception) {
                 System.out.println("The value you gave in is incorrect. Please try again.");
@@ -51,26 +52,26 @@ public class Board {
     }
 
     public void initialiseFields() {
-        fieldsOnBoard[0] = new NotBuyable();
-        fieldsOnBoard[1] = new Buyable();
-        fieldsOnBoard[2] = new NotBuyable();
-        fieldsOnBoard[3] = new Buyable();
-        fieldsOnBoard[4] = new NotBuyable();
-        fieldsOnBoard[5] = new Buyable();
-        fieldsOnBoard[6] = new Buyable();
-        fieldsOnBoard[7] = new NotBuyable();
-        fieldsOnBoard[8] = new NotBuyable();
-        fieldsOnBoard[9] = new Buyable();
-        fieldsOnBoard[10] = new NotBuyable();
-        fieldsOnBoard[11] = new Buyable();
-        fieldsOnBoard[12] = new NotBuyable();
-        fieldsOnBoard[13] = new Buyable();
-        fieldsOnBoard[14] = new NotBuyable();
-        fieldsOnBoard[15] = new Buyable();
-        fieldsOnBoard[16] = new Buyable();
-        fieldsOnBoard[17] = new NotBuyable();
-        fieldsOnBoard[18] = new NotBuyable();
-        fieldsOnBoard[19] = new Buyable();
+        fieldsOnBoard[0] = new NotBuyable("veld met index 0");
+        fieldsOnBoard[1] = new Buyable(bank, 100, 10, "veld met index 1");
+        fieldsOnBoard[2] = new NotBuyable("veld met index 2");
+        fieldsOnBoard[3] = new Buyable(bank, 100, 10, "veld met index 3");
+        fieldsOnBoard[4] = new NotBuyable("veld met index 4");
+        fieldsOnBoard[5] = new Buyable(bank, 100, 10, "veld met index 5");
+        fieldsOnBoard[6] = new Buyable(bank, 100, 10, "veld met index 6");
+        fieldsOnBoard[7] = new NotBuyable("veld met index 7");
+        fieldsOnBoard[8] = new NotBuyable("veld met index 8");
+        fieldsOnBoard[9] = new Buyable(bank, 100, 10, "veld met index 9");
+        fieldsOnBoard[10] = new NotBuyable("veld met index 10");
+        fieldsOnBoard[11] = new Buyable(bank, 100, 10, "veld met index 11");
+        fieldsOnBoard[12] = new NotBuyable("veld met index 12");
+        fieldsOnBoard[13] = new Buyable(bank, 100, 10, "veld met index 13");
+        fieldsOnBoard[14] = new NotBuyable("veld met index 14");
+        fieldsOnBoard[15] = new Buyable(bank, 100, 10, "veld met index 15");
+        fieldsOnBoard[16] = new Buyable(bank, 100, 10, "veld met index 16");
+        fieldsOnBoard[17] = new NotBuyable("veld met index 17");
+        fieldsOnBoard[18] = new NotBuyable("veld met index 18");
+        fieldsOnBoard[19] = new Buyable(bank, 100, 10, "veld met index 19");
     }
 
     public int playerWhoBegins() {
@@ -78,6 +79,7 @@ public class Board {
         Random r = new Random();
         int playerWhoBegins = r.nextInt(players.length);
         System.out.println("The player who begins is " + players[playerWhoBegins].getName());
+        System.out.println("-----------");
         return playerWhoBegins;
     }
 

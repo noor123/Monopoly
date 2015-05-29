@@ -8,8 +8,17 @@ public class Buyable implements Field {
     private Player playerThatOwnsThisField;
     private double cost;
     private double rent;
+    private String name;
+
+    public Buyable(Player playerThatOwnsThisField, double cost, double rent, String name) {
+        this.playerThatOwnsThisField = playerThatOwnsThisField;
+        this.cost = cost;
+        this.rent = rent;
+        this.name = name;
+    }
 
     public void enterField(Player player) {
+        System.out.println("The player comes on the field " + this.getName());
         if (playerThatOwnsThisField.getName().equals("bank")) {
             System.out.println("The cost of this card is " + cost + " euro. You have " + player.getMoney() + " euro.");
             System.out.println("Would you like to buy this card? Click \"yes\" if you want to.");
@@ -44,5 +53,21 @@ public class Buyable implements Field {
 
     public void setCost(double cost) {
         this.cost = cost;
+    }
+
+    public double getRent() {
+        return rent;
+    }
+
+    public void setRent(double rent) {
+        this.rent = rent;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

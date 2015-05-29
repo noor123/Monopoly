@@ -17,10 +17,12 @@ public class Player {
     }
 
     public void throwDices(Board b) {
+        System.out.println(this.getName() + " will now throw the dices.");
         Random dice1 = new Random();
         Random dice2 = new Random();
         int result = dice1.nextInt(6)+1 + dice2.nextInt(6)+1;
-        System.out.println("worp with dices " + result);
+        System.out.println("The worp with the dices has a total of: " + result);
+        System.out.println(this.getName() + " will now go " + result + "steps further." );
         if ((fieldWherePionIs + result) > (b.getFieldsOnBoard().length - 1)) {
             fieldWherePionIs = result - (b.getFieldsOnBoard().length - fieldWherePionIs);
         } else {
